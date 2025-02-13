@@ -22,7 +22,7 @@ Linux:
 Local da Chave criada: /home/edvaldo/.ssh
 Copia a chave: cat id_ed25519.pub 
 
-Github: em EdMartinezNunes 
+Github:  na_sua_conta_github (your profile)
 -<Setting>:
   -<SSH and GPG Keys>:
   	<New SSH key>:

@@ -3,7 +3,7 @@ Isso foi feito em 13/02/2025 e Deu Certo ! --> pode ser que mude :)
 Passo 01:
 No Servidor de Hospedagem github (pelo Chromium)
 
-1 - Criar uma conta no GitHub ed...nu... - so..@......25
+1 - Criar uma conta no GitHub novaconta - senha
 2 - Aba - Repositories New 
 - Create a new repository - Create repository 
 Opções:

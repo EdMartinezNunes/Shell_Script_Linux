@@ -1,0 +1,81 @@
+Isso foi feito em 13/02/2025 e Deu Certo ! --> pode ser que mude :)
+
+Passo 01:
+No Servidor de Hospedagem github (pelo Chromium)
+
+1 - Criar uma conta no GitHub EdMartinezNunes - so..@2025
+2 - Aba - Repositories New 
+- Create a new repository - Create repository 
+Opções:
+- EdMartinezNunes / teste-git  (*obrigatorio Name)
+- Public
+- Add a README
+test-git em <> Code
+Opcões:
+-HTTPS
+-SSH * git@github.com:EdMartinezNunes/teste-git.git
+-------------------------------------------------------------
+Passo 02:
+Criando uma Chave Pública ssh
+Linux: 
+- ssh-keygen -t ed25519 -C "eduardomartineznunes@gmail.com"
+Local da Chave criada: /home/eduardo/.ssh
+Copia a chave: cat id_ed25519.pub 
+
+Github: em EdMartinezNunes 
+-<Setting>:
+  -<SSH and GPG Keys>:
+  	<New SSH key>:
+  	Title: Nova chave para o desktop 2025
+  	Key: cola a chave .pub - <Add SSH key>
+
+Verificar se a chave funciona corretamente:
+Linux:
+$ ssh -T git@github.com
+
+Mensagem que aparece quando a chave esta corretamente configurada:
+(----
+The authenticity of host 'github.com (20.201.28.151)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi EdMartinezNunes! You've successfully authenticated, but GitHub does not provide shell access. ----)
+-----------------------------------------------------------------------
+Passo 03 De uso do git :
+
+Instalar o git no linux:
+sudo apt update
+sudo apt install git
+
+Verificar se Instalado:
+git --version
+
+Clonar o Repositorio remoto: SSH
+git clone git@github.com:EdMartinezNunes/teste-git.git
+ls -> ./teste-git 
+Criar um script qualquer
+vi script.py
+Comandos do git : git status, git add arquivo, git commit -m "Mensagem"
+git status -> monitora o estado do arquivo.
+git add nomearquivo -> adiciona novos arquivos ao git.
+git commit -m "mensagem" -> Prepara definitivamente os arquivos.
+
+Enviar ao repositorio:
+*git remote add origin git@github.com:EdMartinezNunes/teste-git.git
+(não precisa pois já está clonado o repositorio).
+git branch -M main
+git push -u origin main
+
+
+Deletar um Repositorio remoto:
+No Github: -Setting: -Danger Zone: -Delete this repository
+
+
+
+
+
+
+
+
+

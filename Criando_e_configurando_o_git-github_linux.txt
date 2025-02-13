@@ -62,10 +62,13 @@ git add nomearquivo -> adiciona novos arquivos ao git.
 git commit nomearquivo -m "mensagem qualquer" -> Prepara definitivamente os arquivos.
 
 Enviar ao repositorio:
-*git remote add origin git@github.com:EdMartinezNunes/teste-git.git
+1- *git remote add origin git@github.com:EdMartinezNunes/teste-git.git
 (não precisa pois já está clonado o repositorio).
-git branch -M main
-git push -u origin main
+
+2- git branch -M main (Somente a 1⁰ Vez !!! Depois de uma alteração nos arquivos repete o passo 03 comandos:git status...git add... git commit -m..)
++ git push -u origin main)
+
+3- git push -u origin main
 
 
 Deletar um Repositorio remoto:

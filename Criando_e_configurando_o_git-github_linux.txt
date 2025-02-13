@@ -18,8 +18,8 @@ Opcões:
 Passo 02:
 Criando uma Chave Pública ssh
 Linux: 
-- ssh-keygen -t ed25519 -C "eduardomartineznunes@gmail.com"
-Local da Chave criada: /home/eduardo/.ssh
+- ssh-keygen -t ed25519 -C "seuemail.com"
+Local da Chave criada: /home/edvaldo/.ssh
 Copia a chave: cat id_ed25519.pub 
 
 Github: em EdMartinezNunes 

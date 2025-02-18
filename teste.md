@@ -1,2 +1,0 @@
-*** Titulo qualquer
-texto qualquer

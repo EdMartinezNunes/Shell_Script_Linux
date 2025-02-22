@@ -1,0 +1,65 @@
+#!/bin/bash
+
+#
+# barra-gui (Shell Script)
+#
+# Objetivo: Oferecer uma barra de Progresso para execução de programas.
+#
+# Site https://github.com/EdMartinezNunes
+#
+# Versão 1.0
+#
+# Programador: Eduardo Martinez 19/02/2025
+#
+# Email: eduardomartineznunes@gmail.com
+#
+# Licença: GPL-3.0 <https://www.gnu.org/licenses/gpl-3.0.txt
+
+
+VERSION="Versão 1.0"
+NOME_HELP="\033[00;01mNOME\033[m\n\t$(basename $0)\n"
+ 
+DESCRICAO_HELP="\033[00;01mDESCRIÇÃO\033[m\n\tGera um barra de Progresso para um Script\n"
+ 
+PARA_HELP="\033[00;01mPARAMETROS\033[m\n
+ \t-h -help Exibe essa tela de ajuda e sai.
+ \t-v --version Exibe a versão do Programa e sai.
+ \t-r --run Inicia a barra de progresso com script.sh"
+ 
+
+ 
+EXEM_HELP="\033[00;01mEXEMPLO DE USO\033[m\n
+\t~$ ./barra-gui -r ou --run ./contador.sh"
+ 
+HELP="$NOME_HELP\n$DESCRICAO_HELP\n$PARA_HELP\n$EXEM_HELP"
+
+
+[ -z "$1" ] && echo "Ofereça uma opção qualquer, use -h para obter ajuda" && exit 1
+
+case $1 in
+        
+	-h | --help) ## Exibe ajuda do programa
+                echo -e "$HELP"
+                exit 0
+        ;;
+        -v | --version) ## Exibe a versão do programa
+                echo "$VERSION"
+                exit 0
+	;;
+	-r | --run) ## Executa a barra de Progresso
+		
+		SCRIPT=$2
+		[ -z "$SCRIPT" ] && echo "Erro: Forneça Um Script para Dialog !!!" && exit 3
+		#set -xv
+		DIRNAME=$(dirname $SCRIPT)
+		BASENAME=$(basename $SCRIPT)
+		SCRIPT="$DIRNAME/$BASENAME"
+		($SCRIPT) | dialog --title "Exemplo" --gauge "Em Execução" 8 40
+		exit 0
+
+        ;;
+        *)## Erro de opção desconhecida
+                echo "Erro: opção $1 desconhecida!"
+                exit 2
+esac
+
